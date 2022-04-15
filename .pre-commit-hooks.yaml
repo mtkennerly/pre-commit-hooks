@@ -1,0 +1,54 @@
+# Python
+- id: poetry-black
+  name: poetry-black
+  entry: poetry run black
+  language: system
+  types: [python]
+- id: poetry-flake8
+  name: poetry-flake8
+  entry: poetry run flake8
+  language: system
+  types: [python]
+- id: poetry-mypy
+  name: poetry-mypy
+  entry: poetry run mypy
+  language: system
+  types: [python]
+  args:
+    - --ignore-missing-imports
+    - --no-site-packages
+- id: poetry-pytest
+  name: poetry-pytest
+  entry: poetry run pytest
+  language: system
+  types: [python]
+  pass_filenames: false
+
+# Rust
+- id: cargo-clippy
+  name: cargo-clippy
+  entry: cargo clippy
+  language: system
+  types: [rust]
+  pass_filenames: false
+  args:
+    - --workspace
+    - --
+    - --deny=warnings
+- id: cargo-fmt
+  name: cargo-fmt
+  language: system
+  entry: cargo fmt --
+  types: [rust]
+  args:
+    - --all
+
+# .NET
+- id: dotnet-format
+  name: dotnet-format
+  entry: dotnet format
+  language: system
+  types: [c#]
+  pass_filenames: false
+  args:
+    - src
