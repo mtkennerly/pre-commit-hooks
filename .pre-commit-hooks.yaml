@@ -40,8 +40,6 @@
   language: system
   entry: cargo fmt --
   types: [rust]
-  args:
-    - --all
 
 # .NET
 - id: dotnet-format
