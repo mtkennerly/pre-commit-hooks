@@ -38,7 +38,7 @@
 - id: cargo-fmt
   name: cargo-fmt
   language: system
-  entry: cargo fmt --
+  entry: cargo fmt -- --config imports_granularity=Crate
   types: [rust]
 
 # .NET
