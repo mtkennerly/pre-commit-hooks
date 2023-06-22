@@ -23,6 +23,11 @@
   language: system
   types: [python]
   pass_filenames: false
+- id: poetry-ruff
+  name: poetry-ruff
+  entry: poetry run ruff check
+  language: system
+  types: [python]
 
 # Rust
 - id: cargo-clippy
