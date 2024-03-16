@@ -23,9 +23,14 @@
   language: system
   types: [python]
   pass_filenames: false
-- id: poetry-ruff
-  name: poetry-ruff
+- id: poetry-ruff-check
+  name: poetry-ruff-check
   entry: poetry run ruff check
+  language: system
+  types: [python]
+- id: poetry-ruff-format
+  name: poetry-ruff-format
+  entry: poetry run ruff format
   language: system
   types: [python]
 
